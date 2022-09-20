@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"como usuario quiero ingresar a la plataforma web swaglab para realizar una compra","Exitoso","SUCCESS","2022-09-19T16:51:49.473-05:00[America/Bogota]","0.0","12.75"
+"como usuario quiero ingresar a la plataforma web swaglab para realizar una compra","Bloqueado","SUCCESS","2022-09-19T16:52:02.222-05:00[America/Bogota]","0.0","5.82"
+"como usuario quiero ingresar a la plataforma web swaglab para realizar una compra","Problema","SUCCESS","2022-09-19T16:52:08.047-05:00[America/Bogota]","0.0","5.45"
+"como usuario quiero ingresar a la plataforma web swaglab para realizar una compra","Satisfactorio","SUCCESS","2022-09-19T16:52:13.507-05:00[America/Bogota]","0.0","11.3"
