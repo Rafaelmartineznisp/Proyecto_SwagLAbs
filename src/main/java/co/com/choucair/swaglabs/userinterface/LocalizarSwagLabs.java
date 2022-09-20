@@ -22,4 +22,7 @@ public class LocalizarSwagLabs extends PageObject {
     public static final Target CONTINUAR = Target.the("Click en continuar").located(By.id("continue"));
     public static final Target FINALIZAR = Target.the("Click en finalizar").located(By.id("finish"));
     public static final Target COMPRA = Target.the("Verificar compra").located(By.xpath("//div[@id='checkout_complete_container']/h2"));
+    public static final Target VOLVER_HOME = Target.the("Volver a la pagina principal").located(By.id("back-to-products"));
+    public static final Target MENU = Target.the("Menu").located(By.id("react-burger-menu-btn"));
+    public static final Target SALIR = Target.the("Salir de la plataforma").located(By.xpath("//div[@class='bm-menu-wrap']//a[contains(text(),'Logout')]"));
 }

@@ -1,19 +1,19 @@
 package co.com.choucair.swaglabs.questions;
 
-import co.com.choucair.swaglabs.model.Credencial;
+import co.com.choucair.swaglabs.model.TDatos;
 import co.com.choucair.swaglabs.userinterface.LocalizarSwagLabs;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
 public class Validar implements Question<Boolean> {
- private Credencial tdatos;
+ private TDatos tdatos;
 
-    public Validar(Credencial tdatos) {
+    public Validar(TDatos tdatos) {
         this.tdatos = tdatos;
     }
 
-    public static Validar bloqueo(Credencial tdatos) {
+    public static Validar bloqueo(TDatos tdatos) {
         return  new Validar(tdatos);
     }
 

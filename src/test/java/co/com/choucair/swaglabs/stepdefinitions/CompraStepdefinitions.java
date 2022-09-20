@@ -1,9 +1,9 @@
 package co.com.choucair.swaglabs.stepdefinitions;
 
-import co.com.choucair.swaglabs.model.Credencial;
-import co.com.choucair.swaglabs.questions.Responder;
+import co.com.choucair.swaglabs.model.TDatos;
 import co.com.choucair.swaglabs.questions.ValidarCompra;
 import co.com.choucair.swaglabs.tasks.AgregarProducto;
+import co.com.choucair.swaglabs.tasks.Cerrar;
 import co.com.choucair.swaglabs.tasks.Comprar;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Entonces;
@@ -26,13 +26,19 @@ public class CompraStepdefinitions {
     }
 
     @Y("^llena el formulario de compra$")
-    public void llenaElFormularioDeCompra(List<Credencial> tdatos) {
+    public void llenaElFormularioDeCompra(List<TDatos> tdatos) {
         OnStage.theActorInTheSpotlight().attemptsTo(Comprar.ingresar(tdatos.get(0)));
 
     }
 
     @Entonces("^verifica la comprar realizada$")
-    public void verificaLaComprarRealizada(List<Credencial> tdatos) {
+    public void verificaLaComprarRealizada(List<TDatos> tdatos) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidarCompra.validar(tdatos.get(0))));
+    }
+
+    @Y("^cerrar sesion$")
+    public void cerrarSesion() {
+        OnStage.theActorInTheSpotlight().attemptsTo(Cerrar.terminar());
+
     }
 }

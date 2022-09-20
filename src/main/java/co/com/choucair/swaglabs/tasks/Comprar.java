@@ -1,6 +1,6 @@
 package co.com.choucair.swaglabs.tasks;
 
-import co.com.choucair.swaglabs.model.Credencial;
+import co.com.choucair.swaglabs.model.TDatos;
 import co.com.choucair.swaglabs.userinterface.LocalizarSwagLabs;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -12,13 +12,13 @@ public class Comprar implements Task {
 
 
 
-    private Credencial tdatos;
+    private TDatos tdatos;
 
-    public Comprar(Credencial tdatos) {
+    public Comprar(TDatos tdatos) {
         this.tdatos = tdatos;
     }
 
-    public static Comprar ingresar(Credencial tdatos) {
+    public static Comprar ingresar(TDatos tdatos) {
         return Tasks.instrumented(Comprar.class,tdatos);
     }
 

@@ -1,5 +1,5 @@
 package co.com.choucair.swaglabs.stepdefinitions;
-import co.com.choucair.swaglabs.model.Credencial;
+import co.com.choucair.swaglabs.model.TDatos;
 import co.com.choucair.swaglabs.questions.Responder;
 import co.com.choucair.swaglabs.questions.Validar;
 import co.com.choucair.swaglabs.tasks.Abrir;
@@ -27,27 +27,28 @@ public class SwaglabsStepDefinitions {
     }
 
     @Cuando("^digita las credenciales de acceso$")
-    public void digitaLasCredencialesDeAcceso(List<Credencial> credencials) {
-        OnStage.theActorInTheSpotlight().attemptsTo(Loguear.ingresar(credencials.get(0)));
+    public void digitaLasCredencialesDeAcceso(List<TDatos> tdatos) {
+        OnStage.theActorInTheSpotlight().attemptsTo(Loguear.ingresar(tdatos.get(0)));
     }
 
     @Entonces("^verifica el ingreso$")
-    public void verificaElIngreso(List<Credencial> credencials) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Responder.validar(credencials.get(0))));
+    public void verificaElIngreso(List<TDatos> tdatos) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Responder.validar(tdatos.get(0))));
     }
 
+
     @Entonces("^verifica el no ingreso$")
-    public void verificaElNoIngreso(List<Credencial> tdatos) {
+    public void verificaElNoIngreso(List<TDatos> tdatos) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Validar.bloqueo(tdatos.get(0))));
     }
 
     @Entonces("^verifica el ingreso con problemas$")
-    public void verificaElIngresoConProblemas(List<Credencial> credencials) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Responder.validar(credencials.get(0))));
+    public void verificaElIngresoConProblemas(List<TDatos> tdatos) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Responder.validar(tdatos.get(0))));
     }
 
     @Entonces("^verifica el ingreso sin problemas$")
-    public void verificaElIngresoSinProblemas(List<Credencial> credencials) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Responder.validar(credencials.get(0))));
+    public void verificaElIngresoSinProblemas(List<TDatos> tdatos) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Responder.validar(tdatos.get(0))));
     }
 }

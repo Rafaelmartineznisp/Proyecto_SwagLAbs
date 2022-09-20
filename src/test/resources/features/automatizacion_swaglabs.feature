@@ -14,7 +14,7 @@ Característica: como usuario quiero ingresar a la plataforma web swaglab para r
     Entonces verifica el ingreso
       | logueado   |
       | <logueado> |
-
+      Y cerrar sesion
     Ejemplos:
       | usuario       | contrasenna  | logueado |
       | standard_user | secret_sauce | PRODUCTS |
@@ -27,7 +27,7 @@ Característica: como usuario quiero ingresar a la plataforma web swaglab para r
     Entonces verifica el no ingreso
       | logueado   |
       | <logueado> |
-
+      Y cerrar sesion
     Ejemplos:
       | usuario         | contrasenna  | logueado                                            |
       | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out. |
@@ -40,8 +40,7 @@ Característica: como usuario quiero ingresar a la plataforma web swaglab para r
     Entonces verifica el ingreso con problemas
       | logueado   |
       | <logueado> |
-
-    Ejemplos:
+         Ejemplos:
       | usuario      | contrasenna  | logueado |
       | problem_user | secret_sauce | PRODUCTS |
 
@@ -53,7 +52,7 @@ Característica: como usuario quiero ingresar a la plataforma web swaglab para r
     Entonces verifica el ingreso sin problemas
       | logueado   |
       | <logueado> |
-
+      Y cerrar sesion
     Ejemplos:
       | usuario                 | contrasenna  | logueado |
       | performance_glitch_user | secret_sauce | PRODUCTS |

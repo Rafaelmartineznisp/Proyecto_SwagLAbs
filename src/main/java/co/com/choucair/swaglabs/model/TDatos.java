@@ -1,6 +1,6 @@
 package co.com.choucair.swaglabs.model;
 
-public class Credencial {
+public class TDatos {
     private String usuario;
     private String contrasenna;
     private String logueado;
@@ -8,7 +8,14 @@ public class Credencial {
     private String apellido;
     private String codigopostal;
     private  String verificarcompra;
+    private  String cerrar;
 
+    public String getCerrar() {
+        return cerrar;
+    }
+    public void setCerrar(String cerrar) {
+        this.cerrar = cerrar;
+    }
     public String getVerificarcompra() {
         return verificarcompra;
     }
