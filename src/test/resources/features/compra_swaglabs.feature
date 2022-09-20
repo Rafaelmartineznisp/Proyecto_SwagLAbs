@@ -16,6 +16,7 @@ Característica: como usuario quiero comprar articulos  en la plataforma web swa
     Entonces verifica la comprar realizada
       | verificarcompra  |
       | <verificarcompra> |
+      Y cerrar sesion
       Ejemplos:
       | usuario       | contrasenna  |nombre|apellido|codigopostal| verificarcompra |
       | standard_user | secret_sauce |Rafael |martinez|242424|THANK YOU FOR YOUR ORDER |
